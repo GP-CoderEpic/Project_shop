@@ -24,9 +24,11 @@
         <span class="num">00</span>
         <span class="plus">+</span>
     </div> -->
-        
-    <form action="http://localhost:8080/", method="post">
-        <button>Purchase</button>
+    
+    <p>Stock Left <%= stock %></p>
+    <form action="/" method="post">
+        <input type="hidden" name="_method" value="PATCH">
+        <button type="submit">Purchase</button>
     </form>
     
 
