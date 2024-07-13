@@ -6,8 +6,9 @@ const methodOverride = require('method-override');
 require("dotenv").config();
 console.log(process.env.PORT);
 const app = express();
- 
-mongoose.connect("mongodb+srv://Gaurav-admin:gaurav_200519@cluster0.ujtovnr.mongodb.net/stockCheck")
+
+const connecting = process.env.CONNECT;
+mongoose.connect(connecting)
 .then (()=> {console.log("Mongodb connected")})
 .catch(err => {console.log(err)});
 
