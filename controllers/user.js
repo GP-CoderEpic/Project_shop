@@ -1,4 +1,4 @@
-const User = require('../modules/user');
+const User = require('../models/user');
 
 async function handleGetUser(req,res){
     try {
@@ -29,7 +29,7 @@ async function handlePostUser(req, res){
         user.stock -= 1;
         await user.save();
 
-        console.log("Stock updated:", user);
+        
         return res.redirect('/'); // Redirect back to the homepage or appropriate page
     } catch (error) {
         console.log(error);
@@ -38,20 +38,20 @@ async function handlePostUser(req, res){
 }
 
 async function handleGetStockUser(req,res){
-    console.log(req.body)
+    
     const user = await User.find({});
-    console.log(user);
+    
     return res.render('stock');
 }
 
 async function handlePostStockUser(req, res){
     const { oilstock } = req.body;
-    console.log('Received stock value:', oilstock); // Debugging line
+    
     try {
         const filter = { _id: "6690bb96c78f3d96ec454214" };
         const updateDocument = { $set: { stock: oilstock } };
-        const result = await User.updateOne(filter, updateDocument);
-        console.log('Update result:', result); // Debugging line
+        await User.updateOne(filter, updateDocument);
+        
         return res.redirect('/');
     } catch (error) {
         console.error(error);

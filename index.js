@@ -1,4 +1,5 @@
 const express = require("express");
+const serverless = require('serverless-http');
 const mongoose = require("mongoose");
 const { type } = require("os");
 const path = require('path');
@@ -21,4 +22,4 @@ app.set('views', path.join(__dirname, 'views'));
 app.use('/', userRouter);
 
 
-app.listen(process.env.PORT, () => console.log(`Server Started at PORT: ${process.env.PORT}`));
+app.listen(process.env.PORT, () => console.log(`Server Started`));

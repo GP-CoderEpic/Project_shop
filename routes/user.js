@@ -7,7 +7,7 @@ const {
     handleGetStockUser,
     handlePostStockUser,
 } = require('../controllers/user');
-const User = require('../modules/user');
+const User = require('../models/user');
 
 router.route('/')
 .get(handleGetUser)
