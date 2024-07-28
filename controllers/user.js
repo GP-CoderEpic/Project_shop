@@ -52,7 +52,7 @@ async function handlePostStockUser(req, res){
         const updateDocument = { $set: { stock: oilstock } };
         await User.updateOne(filter, updateDocument);
         
-        return res.redirect('/');
+        return res.redirect('https://project-shop-phi.vercel.app/');
     } catch (error) {
         console.error(error);
         return res.status(500).send("Failed to update stock");
