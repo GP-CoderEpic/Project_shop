@@ -22,4 +22,4 @@ app.set('views', path.join(__dirname, 'views'));
 app.use('https://project-shop-re5vekj8i-gp-coderepics-projects.vercel.app/', userRouter);
 
 
-app.listen("https://project-shop-re5vekj8i-gp-coderepics-projects.vercel.app/", () => console.log(`Server Started`));
+app.listen(process.env.PORT, () => console.log(`Server Started`));
