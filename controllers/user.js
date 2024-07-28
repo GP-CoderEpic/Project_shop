@@ -41,7 +41,7 @@ async function handleGetStockUser(req,res){
     
     const user = await User.find({});
     
-    return res.render('stock');
+    return res.render('https://project-shop-re5vekj8i-gp-coderepics-projects.vercel.app/stock');
 }
 
 async function handlePostStockUser(req, res){
