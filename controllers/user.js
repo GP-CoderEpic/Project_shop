@@ -30,7 +30,7 @@ async function handlePostUser(req, res){
         await user.save();
 
         
-        return res.redirect('/'); // Redirect back to the homepage or appropriate page
+        return res.redirect('https://project-shop-re5vekj8i-gp-coderepics-projects.vercel.app/'); // Redirect back to the homepage or appropriate page
     } catch (error) {
         console.log(error);
         return res.status(500).json({ error: "An error occurred while updating the stock" });

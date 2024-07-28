@@ -9,7 +9,7 @@ const {
 } = require('../controllers/user');
 const User = require('../models/user');
 
-router.route('/')
+router.route('https://project-shop-re5vekj8i-gp-coderepics-projects.vercel.app/')
 .get(handleGetUser)
 .post(handlePostUser);
  
