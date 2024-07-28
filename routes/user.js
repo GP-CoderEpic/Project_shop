@@ -13,7 +13,7 @@ router.route('/')
 .get(handleGetUser)
 .post(handlePostUser);
  
-router.route('/stock')
+router.route('https://project-shop-re5vekj8i-gp-coderepics-projects.vercel.app/stock')
 .get(handleGetStockUser)
 .post(handlePostStockUser);
 
