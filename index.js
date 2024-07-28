@@ -19,7 +19,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 app.set('view engine', "ejs");
 app.set('views', path.join(__dirname, 'views'));
-app.use('https://project-shop-re5vekj8i-gp-coderepics-projects.vercel.app/', userRouter);
+app.use('/', userRouter);
 
 
 app.listen(process.env.PORT, () => console.log(`Server Started`));

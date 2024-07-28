@@ -9,11 +9,11 @@ const {
 } = require('../controllers/user');
 const User = require('../models/user');
 
-router.route('https://project-shop-re5vekj8i-gp-coderepics-projects.vercel.app/')
+router.route('/')
 .get(handleGetUser)
 .post(handlePostUser);
  
-router.route('https://project-shop-re5vekj8i-gp-coderepics-projects.vercel.app/stock')
+router.route('/stock')
 .get(handleGetStockUser)
 .post(handlePostStockUser);
 

@@ -30,7 +30,7 @@ async function handlePostUser(req, res){
         await user.save();
 
         
-        return res.redirect('https://project-shop-re5vekj8i-gp-coderepics-projects.vercel.app/'); // Redirect back to the homepage or appropriate page
+        return res.redirect('/'); // Redirect back to the homepage or appropriate page
     } catch (error) {
         console.log(error);
         return res.status(500).json({ error: "An error occurred while updating the stock" });
@@ -41,7 +41,7 @@ async function handleGetStockUser(req,res){
     
     const user = await User.find({});
     
-    return res.render('https://project-shop-re5vekj8i-gp-coderepics-projects.vercel.app/stock');
+    return res.render('stock');
 }
 
 async function handlePostStockUser(req, res){
@@ -52,7 +52,7 @@ async function handlePostStockUser(req, res){
         const updateDocument = { $set: { stock: oilstock } };
         await User.updateOne(filter, updateDocument);
         
-        return res.redirect('https://project-shop-phi.vercel.app/');
+        return res.redirect('/');
     } catch (error) {
         console.error(error);
         return res.status(500).send("Failed to update stock");
