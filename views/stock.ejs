@@ -6,10 +6,12 @@
     <title>Stock</title>
 </head>
 <body>
-    <form method="post" action="/stock">
-        <label>Enter the stock of the product oil</label>
-        <input type="number" name="oilstock" value="PATCH" placeholder="Like30,40,50....." />
-        <button type="submit">Submit</button>
-    </form>
+    <% product.forEach(product => { %>
+        <form method="post" action="/product/stock" style="margin-bottom: 20px;">
+            <label>Enter the stock of the <%= product.productName %></label>
+            <input type="number" name="<%= product.productName %>" value="PATCH" placeholder="Like30,40,50....." />
+            <button type="submit">Submit</button>
+        </form>
+    <% }) %>
 </body>
 </html>

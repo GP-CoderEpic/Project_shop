@@ -16,5 +16,5 @@ router.route('/')
 router.route('/stock')
 .get(handleGetStockUser)
 .post(handlePostStockUser);
-
+ 
 module.exports = router;
