@@ -1,10 +1,13 @@
 
 
 .about{
-    padding-top: 120px;
+    padding-left: 10px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+p{
+    padding-left: 10px;
+}
 
 
 .wrapper{
@@ -34,8 +37,8 @@
 }
 
 button{
-    margin-top: 20px;
-    margin-left: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
     color: white;
     background-color: #5762D5;
     font-size: 22px;
